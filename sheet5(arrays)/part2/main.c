@@ -4,16 +4,16 @@ int main()
 {
 #define l 11
 #define c 4
-    int T[l] [c] ;
+    int T[c][l] ;
     int i, j;
     int max = 0; // A variable to store the maximum number of goals
     int player = 0; // A variable to store the player number with the maximum number of goals
     int team = 0; // A variable to store the team number with the maximum number of goals
-    printf("Enter the goals scored by each player:\n");
-    for (i = 0; i < l; i++)
+    printf("Enter the goals scored by each team:\n");
+    for (i = 0; i < c; i++)
     {
-        printf("for the player %d: ", i+1);
-        for (j = 0; j < c; j++)
+        printf("for the team %d: ", i+1);
+        for (j = 0; j < l; j++)
         {
             scanf("%d", &T[i][j]); // Read the goals from the user
             if (T[i][j] > max)   // If the current goal is greater than the maximum

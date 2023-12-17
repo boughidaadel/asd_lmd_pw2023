@@ -12,16 +12,16 @@ int main()
     {
         printf("Enter the number %d: ", i);
         scanf("%f", &T[i]); // Read the elements from the user
-        sum += T[i]; // Add the element to the sum
+        sum = sum + T[i]; // Add the element to the sum
     }
     m = sum / 10; // Calculate the mean
     printf("%f", m);
     sum = 0.0; // Reset the sum to zero
     for (int i = 0; i < 10; i++)
     {
-        sum += pow(T[i] - m, 2); // Add the squared deviation to the sum
+        sum = sum + pow(T[i] - m, 2); // Add the squared deviation to the sum
     }
-    sd = sqrt(sum / 10); // Calculate the standard deviation
+    sd = sqrt(sum); // Calculate the standard deviation
     printf("The standard deviation of the array is: %f\n", sd); // Display the result
     return 0;
 
